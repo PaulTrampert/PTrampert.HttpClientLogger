@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.HttpClientLogger", "PTrampert.HttpClientLogger\PTrampert.HttpClientLogger.csproj", "{206C89CD-97D5-4290-B638-6F90EE952538}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTrampert.HttpClientLogger.Test", "PTrampert.HttpClientLogger.Test\PTrampert.HttpClientLogger.Test.csproj", "{DFE26A95-6D8E-4861-A336-A1345CB463A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1E938838-8313-4528-B173-607E0BFF5E90}"
+ProjectSection(SolutionItems) = preProject
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{206C89CD-97D5-4290-B638-6F90EE952538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206C89CD-97D5-4290-B638-6F90EE952538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206C89CD-97D5-4290-B638-6F90EE952538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206C89CD-97D5-4290-B638-6F90EE952538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE26A95-6D8E-4861-A336-A1345CB463A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE26A95-6D8E-4861-A336-A1345CB463A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE26A95-6D8E-4861-A336-A1345CB463A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE26A95-6D8E-4861-A336-A1345CB463A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
