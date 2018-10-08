@@ -23,7 +23,7 @@ namespace PTrampert.HttpClientLogger
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            log.LogInformation("Sending HTTP Request");
+            
             var response = await base.SendAsync(request, cancellationToken);
             log.LogInformation("Got HTTP Response");
             return response;
