@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -10,6 +11,20 @@ namespace PTrampert.HttpClientLogger.Test.LogMessageBuilderTests
 {
     public class WhenBuildingRequestLogMessage : WithLogMessageBuilder
     {
+        [Test]
+        public async Task ItSetsTheUri()
+        {
+            var result = await Subject.BuildRequestLogMessage(new HttpRequestMessage(HttpMethod.Get, "https://example.com/"));
+            Assert.That(result.Uri, Is.EqualTo(new Uri("https://example.com/")));
+        }
+
+        [Test]
+        public async Task ItSetsTheMethod()
+        {
+            var result = await Subject.BuildRequestLogMessage(new HttpRequestMessage(HttpMethod.Get, "https://example.com/"));
+            Assert.That(result.HttpMethod, Is.EqualTo("GET"));
+        }
+
         [Test]
         public async Task ItRedactsPrivateContentFields()
         {
