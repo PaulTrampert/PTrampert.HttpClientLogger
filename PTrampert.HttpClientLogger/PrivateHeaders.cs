@@ -6,7 +6,7 @@ namespace PTrampert.HttpClientLogger
     {
         public PrivateHeaders()
         {
-            Add("authorize");
+            Add("Authorization");
         }
     }
 }
