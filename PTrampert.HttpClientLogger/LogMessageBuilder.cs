@@ -24,6 +24,16 @@ namespace PTrampert.HttpClientLogger
         {
         }
 
+        public async Task<ResponseLogMessage> BuildResponseLogMessage(HttpResponseMessage response)
+        {
+            return new ResponseLogMessage
+            {
+                Status = response.StatusCode,
+                Headers = BuildSanitizedHeaders(response.Headers),
+                Content = await BuildSanitizedContent(response.Content)
+            };
+        }
+
         public async Task<RequestLogMessage> BuildRequestLogMessage(HttpRequestMessage request)
         {
             return new RequestLogMessage
