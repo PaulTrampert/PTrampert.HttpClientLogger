@@ -47,7 +47,7 @@ namespace PTrampert.HttpClientLogger
 
         private async Task<string> BuildSanitizedContent(HttpContent content)
         {
-            if (content == null) return null;
+            if (content?.Headers.ContentType?.MediaType == null) return null;
             var result = "Non-Loggable Content"; 
             switch (content.Headers.ContentType.MediaType)
             {

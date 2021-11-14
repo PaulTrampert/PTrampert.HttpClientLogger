@@ -13,12 +13,12 @@ namespace PTrampert.HttpClientLogger
         private LogMessageBuilder builder;
         private HttpClientLoggerConfig config;
 
-        public HttpClientLogger(ILoggerFactory logFactory, IOptionsSnapshot<HttpClientLoggerConfig> config, HttpMessageHandler innerHandler = null) 
+        public HttpClientLogger(ILoggerFactory logFactory, IOptions<HttpClientLoggerConfig> config, HttpMessageHandler innerHandler = null) 
             : this(logFactory.CreateLogger<HttpClientLogger>(), config, innerHandler) 
         {
         }
         
-        public HttpClientLogger(ILogger log, IOptionsSnapshot<HttpClientLoggerConfig> config, HttpMessageHandler innerHandler = null)
+        public HttpClientLogger(ILogger log, IOptions<HttpClientLoggerConfig> config, HttpMessageHandler innerHandler = null)
             : base(innerHandler ?? new HttpClientHandler())
         {
             this.log = log;
